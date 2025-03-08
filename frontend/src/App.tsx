@@ -1,5 +1,9 @@
+// Peter Hamilton 
+
+//imports
 import React, { useEffect, useState } from "react";
 import "./App.css";
+
 
 interface Team {
   school: string;
@@ -13,7 +17,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     import("./CollegeBasketballTeams.json")
-      .then((data) => setTeams(data.teams)) // ✅ Access "teams" array
+      .then((data) => setTeams(data.teams)) // Access teams array
       .catch((error) => console.error("Error loading JSON:", error));
   }, []);
 
